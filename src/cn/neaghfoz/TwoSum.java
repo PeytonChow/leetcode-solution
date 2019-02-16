@@ -7,13 +7,11 @@ import java.util.Map;
 public class TwoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
-        Solution2 solution = new Solution2();
+        TwoSum solution = new TwoSum();
 
         System.out.println(Arrays.toString(solution.twoSum(nums, 26)));
     }
-}
 
-class Solution1 {
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length; j++) {
@@ -24,10 +22,8 @@ class Solution1 {
         }
         return null;
     }
-}
 
-class Solution2 {
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum2(int[] nums, int target) {
 
         // key->target, value->index
         Map<Integer, Integer> targetMap = new HashMap<>();
